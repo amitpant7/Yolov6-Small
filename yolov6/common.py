@@ -16,7 +16,7 @@ class RepConv(nn.Module):
             self.conv = nn.Conv2d(in_channels, out_channels, 1)
 
         self.bn = nn.BatchNorm2d(out_channels)
-        self.act = nn.ReLU(26 / 255)
+        self.act = nn.LeakyReLU(negative_slope=26 / 256)
 
     def forward(self, x):
         return self.act(self.bn(self.conv(x)))
@@ -66,6 +66,7 @@ class ConvBNReLU(nn.Module):
         padding=None,
     ):
         super().__init__()
+
         if padding is None:
             padding = kernel_size // 2  # Default padding to maintain spatial dimensions
 
@@ -76,7 +77,10 @@ class ConvBNReLU(nn.Module):
         self.act = nn.LeakyReLU(negative_slope=26 / 256)
 
     def forward(self, x):
-        return self.act(self.bn(self.conv(x)))
+        x = self.conv(x)
+        x = self.bn(x)
+        x = self.act(x)  # Activation is not in-place
+        return x
 
 
 class BiFusion(nn.Module):

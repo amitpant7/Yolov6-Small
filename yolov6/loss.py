@@ -140,23 +140,25 @@ class IOULoss(nn.Module):
         return loss
 
 
-class VariFocalLoss(nn.Module):
+class VarifocalLoss(nn.Module):
     def __init__(self):
-        super(VariFocalLoss, self).__init__()
+        super(VarifocalLoss, self).__init__()
 
-    def forward(self, pred_score, gt_score, label, alpha=0.75, gamma=2.0):
+    def forward(self, preds, targets, alpha=0.75, gamma=2.0):
+        """
 
-        weight = alpha * pred_score.pow(gamma) * (1 - label) + gt_score * label
+        :param preds:[bs, grid_size, grid_size,num_classes]
+        :param targets:[bs, grid_size, grid_size,num_classes]
+        :param alpha:
+        :param gamma:
+        :return:
+        """
+        pred_prob = torch.sigmoid(preds)
+
+        weight = alpha * pred_prob.pow(gamma) * (1 - targets) + targets
         with torch.cuda.amp.autocast(enabled=False):
-            pred_score = F.sigmoid(pred_score)
-            loss = (
-                F.binary_cross_entropy(
-                    pred_score.float(), gt_score.float(), reduction="none"
-                )
-                * weight
-            ).sum()
-
-        return loss
+            loss = F.binary_cross_entropy(pred_prob, targets, reduction="none") * weight
+        return loss.mean()
 
 
 class CustomLoss(nn.Module):
@@ -165,7 +167,7 @@ class CustomLoss(nn.Module):
         self.lambda_class = 1.0
         self.lambda_iou = 2.5
 
-        self.varifocal_loss = VariFocalLoss()
+        self.varifocal_loss = VarifocalLoss()
         self.box_loss = IOULoss("corner")
 
     @torch.no_grad()

@@ -38,17 +38,17 @@ class DetectionHead(nn.Module):
         self.reg_pred2 = ConvBNReLU(channels[2], 4 + 1)
 
     def forward(self, x):
-        (x2, x1, x0) = x
+        (x2_o, x1_o, x0_o) = x
 
-        x0 = self.stem0(x0)
+        x0 = self.stem0(x0_o)
         cls_pred0 = self.cls_pred0(self.cls_conv0(x0))
         reg_pred0 = self.reg_pred0(self.reg_conv0(x0))
 
-        x1 = self.stem1(x1)
+        x1 = self.stem1(x1_o)
         cls_pred1 = self.cls_pred1(self.cls_conv1(x1))
         reg_pred1 = self.reg_pred1(self.reg_conv1(x1))
 
-        x2 = self.stem2(x2)
+        x2 = self.stem2(x2_o)
         cls_pred2 = self.cls_pred2(self.cls_conv2(x2))
         reg_pred2 = self.reg_pred2(self.reg_conv2(x2))
 
