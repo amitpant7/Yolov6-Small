@@ -70,7 +70,7 @@ class FinalTranform(torch.nn.Module):
         bbox_with_labesl = (bboxes, labels)
         targets = []
 
-        SCALES = [13, 25, 52]
+        SCALES = [13, 26, 52]
         for scale in SCALES:
             targets.append(self.preprocess_targets(bbox_with_labesl, scale=scale))
 
