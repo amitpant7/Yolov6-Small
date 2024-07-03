@@ -168,6 +168,7 @@ def decode_targets(targets, nc=20, scales=[13, 26, 52], img_size=416, center_thr
         reg_values = reg[i_indices, j_indices, :]  # Shape (num_detections, 5)
 
         l, t, r, b, centerness = reg_values.T
+        l, t, r, b = l * stride, t * stride, r * stride, b * stride
 
         center_x = (i_indices + 0.5) * stride
         center_y = (j_indices + 0.5) * stride

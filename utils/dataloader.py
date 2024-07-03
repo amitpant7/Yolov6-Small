@@ -113,14 +113,26 @@ class FinalTranform(torch.nn.Module):
 
                         if torch.max(reg[:, i, j]) == 0:  # no box assigned yet
                             reg[:, i, j] = torch.tensor(
-                                [l, t, r, b, centerness]
+                                [
+                                    l / stride,
+                                    t / stride,
+                                    r / stride,
+                                    b / stride,
+                                    centerness,
+                                ]
                             )  # .clamp_(min = 0)
 
                         elif max(l, r, t, b) < torch.max(
                             reg[:, i, j]
                         ):  # box already assigned but current box is smaller than previously assigned
                             reg[:, i, j] = torch.tensor(
-                                [l, t, r, b, centerness]
+                                [
+                                    l / stride,
+                                    t / stride,
+                                    r / stride,
+                                    b / stride,
+                                    centerness,
+                                ]
                             ).clamp_(min=0)
 
         return torch.cat([cls, reg], dim=0).permute(1, 2, 0)

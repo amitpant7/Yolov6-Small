@@ -61,7 +61,5 @@ class RepBiPAN(nn.Module):
         n4 = self.rep2(torch.cat([n3_downsamp, p4_reduce], dim=1))
 
         n4_downsamp = self.downsamp1(n4)
-        print(n4_downsamp.shape)
         n5 = self.rep3(torch.cat([n4_downsamp, fpn_out0], dim=1))
-
         return (n3, n4, n5)
