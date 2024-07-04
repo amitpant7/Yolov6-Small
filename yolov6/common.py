@@ -16,10 +16,13 @@ class RepConv(nn.Module):
             self.conv = nn.Conv2d(in_channels, out_channels, 1)
 
         self.bn = nn.BatchNorm2d(out_channels)
-        self.act = nn.LeakyReLU(negative_slope=26 / 256)
+        self.act = nn.LeakyReLU(negative_slope=26 / 256, inplace=False)
 
     def forward(self, x):
-        return self.act(self.bn(self.conv(x)))
+        x = self.conv(x)
+        x = self.bn(x)
+        x = self.act(x)
+        return x
 
 
 class RepVGG(nn.Module):
