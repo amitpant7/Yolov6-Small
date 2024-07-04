@@ -87,12 +87,12 @@ class FinalTranform(torch.nn.Module):
             box_pos = int(0.5 * boxes[2] / stride), int(0.5 * boxes[3] / stride)
             cls[
                 label,
-                pos[0] - box_pos[0] : pos[0] + box_pos[0] + 1,
-                pos[1] - box_pos[1] : pos[1] + box_pos[1] + 1,
+                pos[0] - box_pos[0] : pos[0] + box_pos[0],
+                pos[1] - box_pos[1] : pos[1] + box_pos[1],
             ] = 1
 
-            for i in range(pos[0] - box_pos[0], pos[0] + box_pos[0] + 1):
-                for j in range(pos[1] - box_pos[1], pos[1] + box_pos[1] + 1):
+            for i in range(pos[0] - box_pos[0], pos[0] + box_pos[0]):
+                for j in range(pos[1] - box_pos[1], pos[1] + box_pos[1]):
                     l = (i + 0.5) * stride - (
                         boxes[0] - int(boxes[2] / 2)
                     )  # top calculation
