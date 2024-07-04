@@ -91,6 +91,7 @@ class FinalTranform(torch.nn.Module):
                 pos[1] - box_pos[1] + 1 : pos[1] + box_pos[1],
             ] = 1
 
+
             for i in range(pos[0] - box_pos[0] + 1, pos[0] + box_pos[0]):
                 for j in range(pos[1] - box_pos[1] + 1, pos[1] + box_pos[1]):
                     l = (i + 0.5) * stride - (
