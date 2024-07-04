@@ -21,21 +21,21 @@ class DetectionHead(nn.Module):
         self.cls_conv0 = ConvBNReLU(channels[0], channels[0], 3)
         self.reg_conv0 = ConvBNReLU(channels[0], channels[0], 3)
         self.cls_pred0 = ConvBNReLU(channels[0], self.nc, 1)
-        self.reg_pred0 = ConvBNReLU(channels[0], 4 + 1)
+        self.reg_pred0 = ConvBNReLU(channels[0], 4 + 1, 1)
 
         # stem1 for (26, 26)
         self.stem1 = ConvBNReLU(channels[1], channels[1], 1)
         self.cls_conv1 = ConvBNReLU(channels[1], channels[1], 3)
         self.reg_conv1 = ConvBNReLU(channels[1], channels[1], 3)
         self.cls_pred1 = ConvBNReLU(channels[1], self.nc, 1)
-        self.reg_pred1 = ConvBNReLU(channels[1], 4 + 1)
+        self.reg_pred1 = ConvBNReLU(channels[1], 4 + 1, 1)
 
         # stem1 for (52, 52)
         self.stem2 = ConvBNReLU(channels[2], channels[2], 1)
         self.cls_conv2 = ConvBNReLU(channels[2], channels[2], 3)
         self.reg_conv2 = ConvBNReLU(channels[2], channels[2], 3)
         self.cls_pred2 = ConvBNReLU(channels[2], self.nc, 1)
-        self.reg_pred2 = ConvBNReLU(channels[2], 4 + 1)
+        self.reg_pred2 = ConvBNReLU(channels[2], 4 + 1, 1)
 
     def forward(self, x):
         (x2_o, x1_o, x0_o) = x
