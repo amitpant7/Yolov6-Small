@@ -120,7 +120,7 @@ class FinalTranform(torch.nn.Module):
                                     b / stride,
                                     centerness,
                                 ]
-                            )  # .clamp_(min = 0)
+                            ).clamp_(min=0)
 
                         elif max(l, r, t, b) < torch.max(
                             reg[:, i, j]
