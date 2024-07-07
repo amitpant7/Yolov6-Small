@@ -11,11 +11,11 @@ def calculate_iou(box1, box2, mode=None):
     assert mode is not None
     epsilon = 1e-7
 
-    if mode == "corner":
-        assert torch.all(box1[..., 0] < box1[..., 2]), "box1: x1 must be less than x2"
-        assert torch.all(box1[..., 1] < box1[..., 3]), "box1: y1 must be less than y2"
-        assert torch.all(box2[..., 0] < box2[..., 2]), "box2: x1 must be less than x2"
-        assert torch.all(box2[..., 1] < box2[..., 3]), "box2: y1 must be less than y2"
+    #     if mode == "corner":
+    #         assert torch.all(box1[..., 0] < box1[..., 2]), "box1: x1 must be less than x2"
+    #         assert torch.all(box1[..., 1] < box1[..., 3]), "box1: y1 must be less than y2"
+    #         assert torch.all(box2[..., 0] < box2[..., 2]), "box2: x1 must be less than x2"
+    #         assert torch.all(box2[..., 1] < box2[..., 3]), "box2: y1 must be less than y2"
 
     if mode == "center":
         x1 = torch.max(
@@ -90,17 +90,30 @@ class IOULoss(nn.Module):
         assert pred.shape == target.shape
         assert pred.dtype == target.dtype
         assert self.mode is not None
-        assert not torch.any(pred < 0)
-        assert not torch.any(target < 0)
 
         epsilon = 1e-10
+        mask = target[..., 0] > 0
 
+        pred = torch.exp(pred).clone()
         pred = convert_to_xy(pred)
         target = convert_to_xy(target)
 
+        pred = pred[mask]
+        target = target[mask]
+
         iou = calculate_iou(pred, target, mode=self.mode)
-        b1_x1, b1_y1, b1_x2, b1_y2 = pred.unbind(dim=-1)
-        b2_x1, b2_y1, b2_x2, b2_y2 = target.unbind(dim=-1)
+        b1_x1, b1_y1, b1_x2, b1_y2 = (
+            pred[..., 0],
+            pred[..., 1],
+            pred[..., 2],
+            pred[..., 3],
+        )
+        b2_x1, b2_y1, b2_x2, b2_y2 = (
+            target[..., 0],
+            target[..., 1],
+            target[..., 2],
+            target[..., 3],
+        )
 
         w1, h1 = b1_x2 - b1_x1 + epsilon, b1_y2 - b1_y1 + epsilon
         w2, h2 = b2_x2 - b2_x1 + epsilon, b2_y2 - b2_y1 + epsilon
@@ -109,7 +122,8 @@ class IOULoss(nn.Module):
 
         Cw = (b2_x1 + b2_x2 - b1_x1 - b1_x2) * 0.5
         Ch = (b2_y1 + b2_y2 - b1_y1 - b1_y2) * 0.5
-        sigma = torch.sqrt(Cw**2 + Ch**2) + epsilon
+        sigma = torch.sqrt(Cw**2 + Ch**2 + epsilon)
+
         # sin_alpha = torch.clamp(ch/sigma, -1+epsilon, 1-epsilon)
         # angle_cost = 1 - 2 * torch.pow( torch.sin(torch.arcsin(sin_alpha) - np.pi/4), 2)
 
@@ -137,7 +151,8 @@ class IOULoss(nn.Module):
         # print(f"shape_cost: {shape_cost.sum()}")
         # print(f"distance_cost: {distance_cost.sum()}")
         # print(f"iou:{iou.sum()}")
-        return loss
+        #         print('shape:', loss.shape)
+        return loss.nanmean()
 
 
 class VarifocalLoss(nn.Module):
@@ -158,6 +173,8 @@ class VarifocalLoss(nn.Module):
         weight = alpha * pred_prob.pow(gamma) * (1 - targets) + targets
         with torch.cuda.amp.autocast(enabled=False):
             loss = F.binary_cross_entropy(pred_prob, targets, reduction="none") * weight
+
+            #         loss = F.binary_cross_entropy_with_logits(preds, targets.float(), reduction="none")
         return loss.mean()
 
 
@@ -166,24 +183,33 @@ class CustomLoss(nn.Module):
         super().__init__()
         self.lambda_class = 1.0
         self.lambda_iou = 2.5
+        self.lambda_center = 1.5
 
         self.varifocal_loss = VarifocalLoss()
         self.box_loss = IOULoss("corner")
 
-    @torch.no_grad()
-    def forward(self, pred, target):
+    def forward(self, preds, targets):
         # class loss
         # One-hot encoded labels
-        target_labels = target[..., 5:]
+        total_loss = 0
 
-        # class_score, xyxy [bs, 13, 13, 5]
-        loss_cls = self.varifocal_loss(pred[..., :5], target[..., :5], target_labels)
+        for pred, target in zip(preds, targets):
+            # creating mask to perform cal only where there is object
+            loss_iou = self.box_loss(pred[..., 20:24], target[..., 20:24])
+            loss_cls = self.varifocal_loss(pred[..., :20], target[..., :20])
 
-        # SIOU loss
-        # xyxy
-        loss_iou = self.box_loss(pred[..., 1:5], target[..., 1:5])
-        loss = self.lambda_class * loss_cls + self.lambda_iou * loss_iou
-        return loss
+            mask = target[..., 24:25] > 0
+            center_loss = F.binary_cross_entropy_with_logits(
+                pred[..., 24:25][mask], target[..., 24:25][mask]
+            )
+
+            loss = (
+                self.lambda_class * loss_cls
+                + self.lambda_iou * loss_iou
+                + self.lambda_center * center_loss
+            )
+            total_loss += loss
+        return total_loss
 
 
 def convert_to_xy(pred, img_size=416):
@@ -193,9 +219,10 @@ def convert_to_xy(pred, img_size=416):
     range_vals = torch.arange(s, device=device)
     x_grid, y_grid = torch.meshgrid(range_vals, range_vals, indexing="ij")
 
-    pred[..., 0:1] = x_grid.unsqueeze(dim=-1) * stride - pred[..., 0:1]  # x1
-    pred[..., 1:2] = y_grid.unsqueeze(dim=-1) * stride - pred[..., 1:2]  # Y1
-    pred[..., 2:3] = x_grid.unsqueeze(dim=-1) * stride + pred[..., 2:3]  # x2
-    pred[..., 3:4] = y_grid.unsqueeze(dim=-1) * stride + pred[..., 3:4]  # y2
+    pred[..., 0:1] = x_grid.unsqueeze(dim=-1) - pred[..., 0:1]  # x1
+    pred[..., 1:2] = y_grid.unsqueeze(dim=-1) - pred[..., 1:2]  # Y1
+    pred[..., 2:3] = x_grid.unsqueeze(dim=-1) + pred[..., 2:3]  # x2
+    pred[..., 3:4] = y_grid.unsqueeze(dim=-1) + pred[..., 3:4]  # y2
+    pred = pred.clamp(min=0)
 
-    return pred
+    return pred + 0.5  # offset

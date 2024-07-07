@@ -297,3 +297,118 @@ def check_model_accuracy(all_preds, all_targets, thres=0.5):
     print("Class Score (Accuracy): {:.2f}%".format(class_score))
     print("Object Score (Recall): {:.2f}%".format(obj_recall))
     print("No-object Score (Recall): {:.2f}%".format(no_obj_recall))
+
+
+import torch
+
+
+def decode_preds(
+    targets, nc=20, scales=[13, 26, 52], img_size=416, center_thres=0, conf_thres=0.8
+):
+    """
+    Decode predictions from the model output tensor(s) into bounding boxes.
+
+    Args:
+    - targets (list of torch.Tensor): List of tensors representing model outputs for each scale.
+                                      Each tensor has shape [1, scale, scale, nc + 5].
+    - nc (int): Number of classes.
+    - scales (list): List of scales at which predictions are made.
+    - img_size (int): Size of the input image.
+    - center_thres (float): Threshold for centerness score to keep a bounding box., #not used righ now
+    - conf_thres (float): Threshold for confidence score to consider a class assignment.
+
+    Returns:
+    - torch.Tensor: Decoded bounding boxes with shape [N, 7], where N is the number of valid bounding boxes.
+                    Each row represents [class_label, confidence_score, center_x, center_y, width, height, centerness].
+
+    """
+    outputs = []
+
+    for tensor, scale in zip(targets, scales):
+        # Since batch size is always 1, we can remove the batch dimension directly
+        tensor = tensor.squeeze(0)  # Shape [scale, scale, nc + 5]
+
+        stride = img_size / scale
+        cls = torch.sigmoid(tensor[..., :nc])  # Class assignments
+        reg = tensor[..., nc:]  # Regression info including centerness
+        reg[..., :4] = torch.exp(reg[..., :4])
+        #         reg[..., :4] = (torch.sigmoid(reg[..., :4]) * 2) ** 3
+
+        # Find positions where class assignments are made (any class score > conf_thres)
+        class_mask = cls > conf_thres
+        class_indices = torch.nonzero(class_mask, as_tuple=False)
+
+        # Extract class labels and positions
+        labels = class_indices[:, 2]  # Class indices
+        i_indices = class_indices[:, 0]  # Grid i positions
+        j_indices = class_indices[:, 1]  # Grid j positions
+
+        # Gather regression values using advanced indexing
+        cls_conf = cls[class_mask]
+        reg_values = reg[i_indices, j_indices, :]
+
+        l, t, r, b, centerness = reg_values.T
+        l, t, r, b = l * stride, t * stride, r * stride, b * stride
+
+        center_x = (i_indices.float() + 0.5) * stride
+        center_y = (j_indices.float() + 0.5) * stride
+
+        left = center_x - l
+        top = center_y - t
+        right = center_x + r
+        bottom = center_y + b
+
+        # Calculate the original coordinates
+        centers = (left + right) / 2, (top + bottom) / 2
+
+        widths = right - left
+        heights = bottom - top
+
+        centerness = torch.sigmoid(centerness)
+
+        # Create bounding boxes
+        bboxes = torch.stack(
+            [
+                labels.float(),
+                cls_conf,
+                centers[0],
+                centers[1],
+                widths,
+                heights,
+                centerness,
+            ],
+            dim=1,
+        )
+
+        keep = bboxes[..., -1] >= center_thres
+
+        if bboxes[keep].size(0) > 0:
+            outputs.extend(bboxes[keep].tolist())
+
+    return torch.tensor(outputs).clamp_(min=0)
+
+
+from utils.utils import convert_to_corners
+import torchvision
+
+
+def non_max_suppression(boxes, scores, io_threshold):
+    """
+    Perform non-maximum suppression to eliminate redundant bounding boxes based on their scores.
+
+    Args:
+        boxes (Tensor): Tensor of shape (N, 4) containing bounding boxes in the format (x_center, y_center, width, height).
+        scores (Tensor): Tensor of shape (N,) containing confidence scores for each bounding box.
+        threshold (float): Threshold value for suppressing overlapping boxes.
+
+    Returns:
+        Tensor: Indices of the selected bounding boxes after NMS.
+    """
+    # Convert bounding boxes to [x_min, y_min, x_max, y_max] format
+    boxes = convert_to_corners(boxes)
+    #     print(boxes)
+
+    # Apply torchvision.ops.nms
+    keep = torchvision.ops.nms(boxes, scores, io_threshold)
+
+    return keep
