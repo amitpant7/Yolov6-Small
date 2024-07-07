@@ -9,7 +9,7 @@ from pytorch_nndct.apis import torch_quantizer
 import torch
 import torchvision
 
-from model.yolov4 import *
+from yolov6.yolov6 import *
 from Inspect_and_quantization.wider import *
 
 

@@ -2,7 +2,7 @@ import torch
 import sys
 import os
 from pytorch_nndct.apis import Inspector
-from model.yolov4 import *
+from yolov6.yolov6 import *
 
 
 target = "DPUCZDX8G_ISA1_B4096"
