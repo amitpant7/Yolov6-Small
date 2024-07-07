@@ -1,0 +1,8 @@
+With post processing: FPS=24.07, total frames = 1080.00 , time=44.861394 seconds
+Without Post processing: FPS=23.64, total frames = 1080.00 , time=45.685818 seconds
+
+
+# All images different
+No preprocess, only Post process: FPS=23.07, total frames = 440.00 , time=19.074487 seconds
+With post and pre processing: FPS=14.20, total frames = 330.00 , time=23.236040 seconds
+FPS=15.70, total frames = 440.00 , time=28.026034 seconds

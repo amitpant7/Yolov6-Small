@@ -1,0 +1,1544 @@
+digraph YOLOv6s {
+	input_0 [label="type:nndct_input
+name:YOLOv6s::input_0
+assigned device:user
+out shape:[[1, 416, 416, 3]]" color=black]
+	"YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/Conv2d[conv]/ret.3" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/Conv2d[conv]/ret.3
+assigned device:dpu
+out shape:[[1, 416, 416, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/LeakyReLU[act]/ret.7" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/LeakyReLU[act]/ret.7
+assigned device:dpu
+out shape:[[1, 416, 416, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/Conv2d[conv]/ret.9" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/Conv2d[conv]/ret.9
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/LeakyReLU[act]/ret.13" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/LeakyReLU[act]/ret.13
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.15" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.15
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.19" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.19
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.21" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.21
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.25" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.25
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.27" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.27
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.29" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.29
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.31" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.31
+assigned device:dpu
+out shape:[[1, 208, 208, 32]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/Conv2d[conv]/ret.33" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/Conv2d[conv]/ret.33
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/LeakyReLU[act]/ret.37" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/LeakyReLU[act]/ret.37
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.39" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.39
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.43" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.43
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.45" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.45
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.49" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.49
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.51" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.51
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.53" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.53
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.57" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.57
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.61" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.61
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.63" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.63
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.67" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.67
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.69" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.69
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.71" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.71
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.73" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.73
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/Conv2d[conv]/ret.75" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/Conv2d[conv]/ret.75
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/LeakyReLU[act]/ret.79" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/LeakyReLU[act]/ret.79
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.81" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.81
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.85" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.85
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.87" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.87
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.91" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.91
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.93" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.93
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.95" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.95
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.99" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.99
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.103" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.103
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.105" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.105
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.109" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.109
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.111" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.111
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.113" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.113
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.117" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.117
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.121" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.121
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.123" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.123
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.127" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.127
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.129" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.129
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.131" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.131
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.135" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.135
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.139" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.139
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.141" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.141
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.145" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.145
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.147" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.147
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.149" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.149
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/Conv2d[conv]/ret.153" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/Conv2d[conv]/ret.153
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/LeakyReLU[act]/ret.157" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/LeakyReLU[act]/ret.157
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.159" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.159
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.163" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.163
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.165" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.165
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.169" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.169
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.171" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.171
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.173" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.173
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.177" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.177
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.181" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.181
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.183" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.183
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.187" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.187
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.189" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.189
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.191" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.191
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.195" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.195
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.199" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.199
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.201" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.201
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.205" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.205
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.207" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.207
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.209" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.209
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.213" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.213
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.217" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.217
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.219" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.219
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.223" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.223
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.225" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.225
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.227" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.227
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/Conv2d[conv]/ret.231" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/Conv2d[conv]/ret.231
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/LeakyReLU[act]/ret.235" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/LeakyReLU[act]/ret.235
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/Conv2d[conv]/ret.237" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/Conv2d[conv]/ret.237
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/LeakyReLU[act]/ret.241" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/LeakyReLU[act]/ret.241
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/BatchNorm2d[bn]/ret.243" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/BatchNorm2d[bn]/ret.243
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.245" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.245
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/Conv2d[conv]/ret.249" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/Conv2d[conv]/ret.249
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/LeakyReLU[act]/ret.253" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/LeakyReLU[act]/ret.253
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/Conv2d[conv]/ret.255" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/Conv2d[conv]/ret.255
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/LeakyReLU[act]/ret.259" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/LeakyReLU[act]/ret.259
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/BatchNorm2d[bn]/ret.261" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/BatchNorm2d[bn]/ret.261
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.263" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.263
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.265" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.265
+assigned device:dpu
+out shape:[[1, 26, 26, 256]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/Conv2d[conv]/ret.267" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/Conv2d[conv]/ret.267
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/LeakyReLU[act]/ret.271" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/LeakyReLU[act]/ret.271
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.273" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.273
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.277" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.277
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.279" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.279
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.283" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.283
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.285" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.285
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.287" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.287
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.291" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.291
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.295" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.295
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.297" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.297
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.301" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.301
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.303" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.303
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.305" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.305
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.307" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.307
+assigned device:dpu
+out shape:[[1, 13, 13, 512]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/Conv2d[conv]/ret.309" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/Conv2d[conv]/ret.309
+assigned device:dpu
+out shape:[[1, 13, 13, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/LeakyReLU[act]/ret.313" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/LeakyReLU[act]/ret.313
+assigned device:dpu
+out shape:[[1, 13, 13, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/Upsample[upsamp]/ret.315" [label="type:nndct_resize
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/Upsample[upsamp]/ret.315
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/Conv2d[conv]/ret.317" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/Conv2d[conv]/ret.317
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.321" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.321
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/Conv2d[conv]/ret.323" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/Conv2d[conv]/ret.323
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.327" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.327
+assigned device:dpu
+out shape:[[1, 52, 52, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.329" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.329
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.333" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.333
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ret.335" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ret.335
+assigned device:dpu
+out shape:[[1, 26, 26, 384]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/Conv2d[conv]/ret.337" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/Conv2d[conv]/ret.337
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.341" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.341
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.343" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.343
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.347" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.347
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.349" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.349
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.353" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.353
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.355" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.355
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.357" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.357
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.361" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.361
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.365" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.365
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.367" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.367
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.371" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.371
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.373" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.373
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.375" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.375
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.379" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.379
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.383" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.383
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.385" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.385
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.389" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.389
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.391" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.391
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.393" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.393
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.397" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.397
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.401" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.401
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.403" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.403
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.407" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.407
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.409" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.409
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.411" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.411
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.413" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.413
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/Conv2d[conv]/ret.415" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/Conv2d[conv]/ret.415
+assigned device:dpu
+out shape:[[1, 26, 26, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/LeakyReLU[act]/ret.419" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/LeakyReLU[act]/ret.419
+assigned device:dpu
+out shape:[[1, 26, 26, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/Upsample[upsamp]/ret.421" [label="type:nndct_resize
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/Upsample[upsamp]/ret.421
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/Conv2d[conv]/ret.423" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/Conv2d[conv]/ret.423
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.427" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.427
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/Conv2d[conv]/ret.429" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/Conv2d[conv]/ret.429
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.433" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.433
+assigned device:dpu
+out shape:[[1, 104, 104, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.435" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.435
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.439" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.439
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ret.441" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ret.441
+assigned device:dpu
+out shape:[[1, 52, 52, 192]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/Conv2d[conv]/ret.443" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/Conv2d[conv]/ret.443
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.447" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.447
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.449" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.449
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.453" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.453
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.455" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.455
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.459" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.459
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.461" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.461
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.463" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.463
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.467" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.467
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.471" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.471
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.473" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.473
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.477" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.477
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.479" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.479
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.481" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.481
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.485" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.485
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.489" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.489
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.491" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.491
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.495" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.495
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.497" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.497
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.499" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.499
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.503" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.503
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.507" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.507
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.509" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.509
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.513" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.513
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.515" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.515
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.517" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.517
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.519" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.519
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/Conv2d[conv]/ret.521" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/Conv2d[conv]/ret.521
+assigned device:dpu
+out shape:[[1, 26, 26, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/LeakyReLU[act]/ret.525" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/LeakyReLU[act]/ret.525
+assigned device:dpu
+out shape:[[1, 26, 26, 64]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ret.527" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ret.527
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.529" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.529
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.533" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.533
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.535" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.535
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.539" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.539
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.541" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.541
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.543" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.543
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.547" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.547
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.551" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.551
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.553" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.553
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.557" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.557
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.559" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.559
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.561" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.561
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.565" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.565
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.569" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.569
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.571" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.571
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.575" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.575
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.577" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.577
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.579" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.579
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.583" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.583
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.587" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.587
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.589" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.589
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.593" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.593
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.595" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.595
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.597" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.597
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.599" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.599
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/Conv2d[conv]/ret.601" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/Conv2d[conv]/ret.601
+assigned device:dpu
+out shape:[[1, 13, 13, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/LeakyReLU[act]/ret.605" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/LeakyReLU[act]/ret.605
+assigned device:dpu
+out shape:[[1, 13, 13, 128]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/ret.607" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/ret.607
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.609" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.609
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.613" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.613
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.615" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.615
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.619" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.619
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.621" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.621
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.623" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.623
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.627" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.627
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.631" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.631
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.633" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.633
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.637" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.637
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.639" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.639
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.641" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.641
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.645" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.645
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.649" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.649
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.651" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.651
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.655" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.655
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.657" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.657
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.659" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.659
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.663" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.663
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.667" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.667
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.669" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.669
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.673" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.673
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.675" [label="type:nndct_batch_norm
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.675
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.677" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.677
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.679" [label="type:nndct_elemwise_add
+name:YOLOv6s::YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.679
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/Conv2d[conv]/ret.681" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/Conv2d[conv]/ret.681
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/LeakyReLU[act]/ret.685" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/LeakyReLU[act]/ret.685
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/Conv2d[conv]/ret.687" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/Conv2d[conv]/ret.687
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/LeakyReLU[act]/ret.691" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/LeakyReLU[act]/ret.691
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/Conv2d[conv]/ret.693" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/Conv2d[conv]/ret.693
+assigned device:dpu
+out shape:[[1, 13, 13, 20]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/LeakyReLU[act]/ret.697" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/LeakyReLU[act]/ret.697
+assigned device:dpu
+out shape:[[1, 13, 13, 20]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/Conv2d[conv]/ret.699" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/Conv2d[conv]/ret.699
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/LeakyReLU[act]/ret.703" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/LeakyReLU[act]/ret.703
+assigned device:dpu
+out shape:[[1, 13, 13, 256]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/Conv2d[conv]/ret.705" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/Conv2d[conv]/ret.705
+assigned device:dpu
+out shape:[[1, 13, 13, 5]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/LeakyReLU[act]/ret.709" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/LeakyReLU[act]/ret.709
+assigned device:dpu
+out shape:[[1, 13, 13, 5]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/Conv2d[conv]/ret.711" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/Conv2d[conv]/ret.711
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/LeakyReLU[act]/ret.715" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/LeakyReLU[act]/ret.715
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/Conv2d[conv]/ret.717" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/Conv2d[conv]/ret.717
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/LeakyReLU[act]/ret.721" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/LeakyReLU[act]/ret.721
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/Conv2d[conv]/ret.723" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/Conv2d[conv]/ret.723
+assigned device:dpu
+out shape:[[1, 26, 26, 20]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/LeakyReLU[act]/ret.727" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/LeakyReLU[act]/ret.727
+assigned device:dpu
+out shape:[[1, 26, 26, 20]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/Conv2d[conv]/ret.729" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/Conv2d[conv]/ret.729
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/LeakyReLU[act]/ret.733" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/LeakyReLU[act]/ret.733
+assigned device:dpu
+out shape:[[1, 26, 26, 128]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/Conv2d[conv]/ret.735" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/Conv2d[conv]/ret.735
+assigned device:dpu
+out shape:[[1, 26, 26, 5]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/LeakyReLU[act]/ret.739" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/LeakyReLU[act]/ret.739
+assigned device:dpu
+out shape:[[1, 26, 26, 5]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/Conv2d[conv]/ret.741" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/Conv2d[conv]/ret.741
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/LeakyReLU[act]/ret.745" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/LeakyReLU[act]/ret.745
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/Conv2d[conv]/ret.747" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/Conv2d[conv]/ret.747
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/LeakyReLU[act]/ret.751" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/LeakyReLU[act]/ret.751
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/Conv2d[conv]/ret.753" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/Conv2d[conv]/ret.753
+assigned device:dpu
+out shape:[[1, 52, 52, 20]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/LeakyReLU[act]/ret.757" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/LeakyReLU[act]/ret.757
+assigned device:dpu
+out shape:[[1, 52, 52, 20]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/Conv2d[conv]/ret.759" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/Conv2d[conv]/ret.759
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/LeakyReLU[act]/ret.763" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/LeakyReLU[act]/ret.763
+assigned device:dpu
+out shape:[[1, 52, 52, 64]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/Conv2d[conv]/ret.765" [label="type:nndct_conv2d
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/Conv2d[conv]/ret.765
+assigned device:dpu
+out shape:[[1, 52, 52, 5]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/LeakyReLU[act]/ret.769" [label="type:nndct_leaky_relu
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/LeakyReLU[act]/ret.769
+assigned device:dpu
+out shape:[[1, 52, 52, 5]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ret.771" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ret.771
+assigned device:dpu
+out shape:[[1, 13, 13, 25]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ret.773" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ret.773
+assigned device:dpu
+out shape:[[1, 26, 26, 25]]" color=blue]
+	"YOLOv6s/DetectionHead[head]/ret.775" [label="type:nndct_concat
+name:YOLOv6s::YOLOv6s/DetectionHead[head]/ret.775
+assigned device:dpu
+out shape:[[1, 52, 52, 25]]" color=blue]
+	return_0 [label="type:nndct_return
+name:YOLOv6s::return_0
+assigned device:user
+out shape:[]" color=black]
+	input_0 -> "YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/Conv2d[conv]/ret.3"
+	"YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/Conv2d[conv]/ret.3" -> "YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/LeakyReLU[act]/ret.7"
+	"YOLOv6s/EfficientRep[backbone]/RepConv[repconv1]/LeakyReLU[act]/ret.7" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/Conv2d[conv]/ret.9"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/Conv2d[conv]/ret.9" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/LeakyReLU[act]/ret.13"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/LeakyReLU[act]/ret.13" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.15"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/LeakyReLU[act]/ret.13" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.21"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepConv[0]/LeakyReLU[act]/ret.13" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.27"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.15" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.19"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.19" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.29"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.21" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.25"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.25" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.29"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.27" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.31"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.29" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.31"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[0]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.31" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/Conv2d[conv]/ret.33"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/Conv2d[conv]/ret.33" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/LeakyReLU[act]/ret.37"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/LeakyReLU[act]/ret.37" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.39"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/LeakyReLU[act]/ret.37" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.45"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepConv[0]/LeakyReLU[act]/ret.37" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.51"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.39" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.43"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.43" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.53"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.45" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.49"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.49" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.53"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.51" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.53" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.57"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.63"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.55" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.69"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.57" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.61"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.61" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.71"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.63" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.67"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.67" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.71"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.69" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.73"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.71" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.73"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.73" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/Conv2d[conv]/ret.75"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[1]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.73" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/Conv2d[conv]/ret.429"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/Conv2d[conv]/ret.75" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/LeakyReLU[act]/ret.79"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/LeakyReLU[act]/ret.79" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.81"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/LeakyReLU[act]/ret.79" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.87"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepConv[0]/LeakyReLU[act]/ret.79" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.93"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.81" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.85"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.85" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.95"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.87" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.91"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.91" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.95"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.93" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.95" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.99"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.105"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.97" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.111"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.99" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.103"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.103" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.113"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.105" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.109"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.109" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.113"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.111" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.113" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.117"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.123"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.115" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.129"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.117" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.121"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.121" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.131"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.123" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.127"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.127" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.131"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.129" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.131" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.135"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.141"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.133" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.147"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.135" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.139"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.139" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.149"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.141" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.145"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.145" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.149"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.147" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.149" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/Conv2d[conv]/ret.153"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/Conv2d[conv]/ret.323"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[2]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.151" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/Conv2d[conv]/ret.423"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/Conv2d[conv]/ret.153" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/LeakyReLU[act]/ret.157"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/LeakyReLU[act]/ret.157" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.159"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/LeakyReLU[act]/ret.157" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.165"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepConv[0]/LeakyReLU[act]/ret.157" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.171"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.159" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.163"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.163" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.173"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.165" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.169"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.169" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.173"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.171" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.173" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.177"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.183"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.175" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.189"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.177" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.181"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.181" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.191"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.183" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.187"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.187" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.191"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.189" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.191" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.195"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.201"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.193" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.207"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.195" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.199"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.199" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.209"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.201" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.205"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.205" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.209"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.207" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.209" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.213"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.219"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[2]/ret.211" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.225"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.213" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.217"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.217" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.227"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.219" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.223"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.223" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.227"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.225" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.227" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/Conv2d[conv]/ret.231"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/Conv2d[conv]/ret.237"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[3]/ret.229" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/BatchNorm2d[bn]/ret.243"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/Conv2d[conv]/ret.231" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/LeakyReLU[act]/ret.235"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv3]/LeakyReLU[act]/ret.235" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.245"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/Conv2d[conv]/ret.237" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/LeakyReLU[act]/ret.241"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/RepConv[conv1]/LeakyReLU[act]/ret.241" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.245"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/BatchNorm2d[bn]/ret.243" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.245" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/Conv2d[conv]/ret.249"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/Conv2d[conv]/ret.255"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[4]/ret.247" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/BatchNorm2d[bn]/ret.261"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/Conv2d[conv]/ret.249" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/LeakyReLU[act]/ret.253"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv3]/LeakyReLU[act]/ret.253" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.263"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/Conv2d[conv]/ret.255" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/LeakyReLU[act]/ret.259"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/RepConv[conv1]/LeakyReLU[act]/ret.259" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.263"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/BatchNorm2d[bn]/ret.261" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.265"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.263" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.265"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.265" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/Conv2d[conv]/ret.267"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[3]/RepBlock[1]/RepVGG[layers]/ModuleList[5]/ret.265" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/Conv2d[conv]/ret.317"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/Conv2d[conv]/ret.267" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/LeakyReLU[act]/ret.271"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/LeakyReLU[act]/ret.271" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.273"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/LeakyReLU[act]/ret.271" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.279"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepConv[0]/LeakyReLU[act]/ret.271" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.285"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.273" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.277"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.277" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.287"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.279" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.283"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.283" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.287"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.285" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.287" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.291"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.297"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[0]/ret.289" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.303"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.291" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.295"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.295" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.305"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.297" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.301"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.301" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.305"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.303" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.307"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.305" -> "YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.307"
+	"YOLOv6s/EfficientRep[backbone]/Sequential[layers]/ModuleList[4]/RepBlock[1]/RepVGG[layers]/ModuleList[1]/ret.307" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/Conv2d[conv]/ret.309"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/Conv2d[conv]/ret.309" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/LeakyReLU[act]/ret.313"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/LeakyReLU[act]/ret.313" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/Upsample[upsamp]/ret.315"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer0]/LeakyReLU[act]/ret.313" -> "YOLOv6s/RepBiPAN[neck]/ret.607"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/Upsample[upsamp]/ret.315" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ret.335"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/Conv2d[conv]/ret.317" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.321"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.321" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ret.335"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/Conv2d[conv]/ret.323" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.327"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.327" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.329"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.329" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.333"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.333" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ret.335"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ret.335" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/Conv2d[conv]/ret.337"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/Conv2d[conv]/ret.337" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.341"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.341" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.343"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.341" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.349"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion0]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.341" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.355"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.343" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.347"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.347" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.357"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.349" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.353"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.353" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.357"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.355" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.357" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.361"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.367"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[0]/ret.359" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.373"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.361" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.365"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.365" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.375"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.367" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.371"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.371" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.375"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.373" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.375" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.379"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.385"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[1]/ret.377" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.391"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.379" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.383"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.383" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.393"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.385" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.389"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.389" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.393"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.391" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.393" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.397"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.403"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[2]/ret.395" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.409"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.397" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.401"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.401" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.411"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.403" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.407"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.407" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.411"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.409" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.413"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.411" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.413"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep0]/RepVGG[layers]/ModuleList[3]/ret.413" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/Conv2d[conv]/ret.415"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/Conv2d[conv]/ret.415" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/LeakyReLU[act]/ret.419"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/LeakyReLU[act]/ret.419" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/Upsample[upsamp]/ret.421"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[reduce_layer1]/LeakyReLU[act]/ret.419" -> "YOLOv6s/RepBiPAN[neck]/ret.527"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/Upsample[upsamp]/ret.421" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ret.441"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/Conv2d[conv]/ret.423" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.427"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv1]/LeakyReLU[act]/ret.427" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ret.441"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/Conv2d[conv]/ret.429" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.433"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv2]/LeakyReLU[act]/ret.433" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.435"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/Conv2d[conv]/ret.435" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.439"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[downsamp]/LeakyReLU[act]/ret.439" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ret.441"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ret.441" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/Conv2d[conv]/ret.443"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/Conv2d[conv]/ret.443" -> "YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.447"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.447" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.449"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.447" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.455"
+	"YOLOv6s/RepBiPAN[neck]/BiFusion[bifusion1]/ConvBNReLU[cv3]/LeakyReLU[act]/ret.447" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.461"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.449" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.453"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.453" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.463"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.455" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.459"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.459" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.463"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.461" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.463" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.467"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.473"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[0]/ret.465" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.479"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.467" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.471"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.471" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.481"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.473" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.477"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.477" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.481"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.479" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.481" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.485"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.491"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[1]/ret.483" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.497"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.485" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.489"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.489" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.499"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.491" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.495"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.495" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.499"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.497" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.499" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.503"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.509"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[2]/ret.501" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.515"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.503" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.507"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.507" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.517"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.509" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.513"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.513" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.517"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.515" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.519"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.517" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.519"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.519" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/Conv2d[conv]/ret.521"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep1]/RepVGG[layers]/ModuleList[3]/ret.519" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/Conv2d[conv]/ret.741"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/Conv2d[conv]/ret.521" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/LeakyReLU[act]/ret.525"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp2]/LeakyReLU[act]/ret.525" -> "YOLOv6s/RepBiPAN[neck]/ret.527"
+	"YOLOv6s/RepBiPAN[neck]/ret.527" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.529"
+	"YOLOv6s/RepBiPAN[neck]/ret.527" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.535"
+	"YOLOv6s/RepBiPAN[neck]/ret.527" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.541"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.529" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.533"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.533" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.543"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.535" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.539"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.539" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.543"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.541" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.543" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.547"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.553"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[0]/ret.545" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.559"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.547" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.551"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.551" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.561"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.553" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.557"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.557" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.561"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.559" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.561" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.565"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.571"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[1]/ret.563" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.577"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.565" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.569"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.569" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.579"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.571" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.575"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.575" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.579"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.577" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.579" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.583"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.589"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[2]/ret.581" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.595"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.583" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.587"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.587" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.597"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.589" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.593"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.593" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.597"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.595" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.599"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.597" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.599"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.599" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/Conv2d[conv]/ret.601"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep2]/RepVGG[layers]/ModuleList[3]/ret.599" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/Conv2d[conv]/ret.711"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/Conv2d[conv]/ret.601" -> "YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/LeakyReLU[act]/ret.605"
+	"YOLOv6s/RepBiPAN[neck]/ConvBNReLU[downsamp1]/LeakyReLU[act]/ret.605" -> "YOLOv6s/RepBiPAN[neck]/ret.607"
+	"YOLOv6s/RepBiPAN[neck]/ret.607" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.609"
+	"YOLOv6s/RepBiPAN[neck]/ret.607" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.615"
+	"YOLOv6s/RepBiPAN[neck]/ret.607" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.621"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/Conv2d[conv]/ret.609" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.613"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv3]/LeakyReLU[act]/ret.613" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.623"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/Conv2d[conv]/ret.615" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.619"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/RepConv[conv1]/LeakyReLU[act]/ret.619" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.623"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/BatchNorm2d[bn]/ret.621" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.623" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.627"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.633"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[0]/ret.625" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.639"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/Conv2d[conv]/ret.627" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.631"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv3]/LeakyReLU[act]/ret.631" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.641"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/Conv2d[conv]/ret.633" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.637"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/RepConv[conv1]/LeakyReLU[act]/ret.637" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.641"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/BatchNorm2d[bn]/ret.639" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.641" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.645"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.651"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[1]/ret.643" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.657"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/Conv2d[conv]/ret.645" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.649"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv3]/LeakyReLU[act]/ret.649" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.659"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/Conv2d[conv]/ret.651" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.655"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/RepConv[conv1]/LeakyReLU[act]/ret.655" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.659"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/BatchNorm2d[bn]/ret.657" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.659" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.663"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.669"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[2]/ret.661" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.675"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/Conv2d[conv]/ret.663" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.667"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv3]/LeakyReLU[act]/ret.667" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.677"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/Conv2d[conv]/ret.669" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.673"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/RepConv[conv1]/LeakyReLU[act]/ret.673" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.677"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/BatchNorm2d[bn]/ret.675" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.679"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.677" -> "YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.679"
+	"YOLOv6s/RepBiPAN[neck]/RepBlock[rep3]/RepVGG[layers]/ModuleList[3]/ret.679" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/Conv2d[conv]/ret.681"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/Conv2d[conv]/ret.681" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/LeakyReLU[act]/ret.685"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/LeakyReLU[act]/ret.685" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/Conv2d[conv]/ret.687"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem0]/LeakyReLU[act]/ret.685" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/Conv2d[conv]/ret.699"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/Conv2d[conv]/ret.687" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/LeakyReLU[act]/ret.691"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv0]/LeakyReLU[act]/ret.691" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/Conv2d[conv]/ret.693"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/Conv2d[conv]/ret.693" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/LeakyReLU[act]/ret.697"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred0]/LeakyReLU[act]/ret.697" -> "YOLOv6s/DetectionHead[head]/ret.771"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/Conv2d[conv]/ret.699" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/LeakyReLU[act]/ret.703"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv0]/LeakyReLU[act]/ret.703" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/Conv2d[conv]/ret.705"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/Conv2d[conv]/ret.705" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/LeakyReLU[act]/ret.709"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred0]/LeakyReLU[act]/ret.709" -> "YOLOv6s/DetectionHead[head]/ret.771"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/Conv2d[conv]/ret.711" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/LeakyReLU[act]/ret.715"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/LeakyReLU[act]/ret.715" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/Conv2d[conv]/ret.717"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem1]/LeakyReLU[act]/ret.715" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/Conv2d[conv]/ret.729"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/Conv2d[conv]/ret.717" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/LeakyReLU[act]/ret.721"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv1]/LeakyReLU[act]/ret.721" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/Conv2d[conv]/ret.723"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/Conv2d[conv]/ret.723" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/LeakyReLU[act]/ret.727"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred1]/LeakyReLU[act]/ret.727" -> "YOLOv6s/DetectionHead[head]/ret.773"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/Conv2d[conv]/ret.729" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/LeakyReLU[act]/ret.733"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv1]/LeakyReLU[act]/ret.733" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/Conv2d[conv]/ret.735"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/Conv2d[conv]/ret.735" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/LeakyReLU[act]/ret.739"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred1]/LeakyReLU[act]/ret.739" -> "YOLOv6s/DetectionHead[head]/ret.773"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/Conv2d[conv]/ret.741" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/LeakyReLU[act]/ret.745"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/LeakyReLU[act]/ret.745" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/Conv2d[conv]/ret.747"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[stem2]/LeakyReLU[act]/ret.745" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/Conv2d[conv]/ret.759"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/Conv2d[conv]/ret.747" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/LeakyReLU[act]/ret.751"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_conv2]/LeakyReLU[act]/ret.751" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/Conv2d[conv]/ret.753"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/Conv2d[conv]/ret.753" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/LeakyReLU[act]/ret.757"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[cls_pred2]/LeakyReLU[act]/ret.757" -> "YOLOv6s/DetectionHead[head]/ret.775"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/Conv2d[conv]/ret.759" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/LeakyReLU[act]/ret.763"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_conv2]/LeakyReLU[act]/ret.763" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/Conv2d[conv]/ret.765"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/Conv2d[conv]/ret.765" -> "YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/LeakyReLU[act]/ret.769"
+	"YOLOv6s/DetectionHead[head]/ConvBNReLU[reg_pred2]/LeakyReLU[act]/ret.769" -> "YOLOv6s/DetectionHead[head]/ret.775"
+	"YOLOv6s/DetectionHead[head]/ret.771" -> return_0
+	"YOLOv6s/DetectionHead[head]/ret.773" -> return_0
+	"YOLOv6s/DetectionHead[head]/ret.775" -> return_0
+}

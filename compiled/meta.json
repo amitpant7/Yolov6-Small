@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "yolov6.xmodel",
+    "kernel": [
+        "subgraph_YOLOv6s__YOLOv6s_DetectionHead_head__ConvBNReLU_cls_conv0__Conv2d_conv__ret_687"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}
