@@ -36,7 +36,7 @@ The model is overfitted on subset of 64 images to test the correct implementatio
 - Learning rate: 0.0001
 - Optimizer: Adam
 
-![[Pasted image 20240707134610.png]]
+![results](Pasted image 20240707134610.png)
 
 ## Summary of the Work
 - Implemented Model architecture, But conversion to normal 3x3 conv during the inference is not supported.
