@@ -135,4 +135,4 @@ class FinalTranform(torch.nn.Module):
                                 ]
                             ).clamp_(min=0)
 
-        return torch.cat([cls, reg], dim=0).permute(2, 0, 1)
+        return torch.cat([cls, reg], dim=0).permute(2,1,0)
